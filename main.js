@@ -11,6 +11,7 @@ function handleClick() {
 
   // html_to_image_append();
   html_to_image_download();
+  html_to_image_download_2x();
   // html2canvas_append();
   // html2canvas_download();
 
@@ -30,6 +31,12 @@ function handleClick() {
   function html_to_image_download() {
     htmlToImage.toPng(captureElement).then(function (dataUrl) {
       saveAs(dataUrl, "html-to-image.png");
+    });
+  }
+
+  function html_to_image_download_2x() {
+    htmlToImage.toPng(captureElement, {pixelRatio: 2}).then(function (dataUrl) {
+      saveAs(dataUrl, "html-to-image_2x.png");
     });
   }
 
