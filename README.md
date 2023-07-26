@@ -10,3 +10,7 @@ To run the project first clone the repository and then run the following to star
 npm install
 npm run dev
 ```
+
+## Changing Selection
+
+It is possible to change what html element will be selected to capture by modifying the `captureElement` variable in main.js. It might be needed to modify the index.html to target a specific element by ID.
